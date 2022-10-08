@@ -1,0 +1,20 @@
+{% extends "photos/base.html" %}
+
+{% block title %}
+<title>{{photo.name}}</title>
+{% endblock title %}
+{% block content %}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col">
+            <a href="{% url 'gallery' %}" class="btn btn-dark my-">Go home</a>
+            <div style="height:90vh">
+                <img style="max-width:100%;max-height:100%;" src="{{photo.image.url}}">
+                <p>{{photo.description}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content%}
